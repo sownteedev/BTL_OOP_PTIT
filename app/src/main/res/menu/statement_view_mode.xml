@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/view_mode_single"
+        android:title="Theo ngày" />
+
+    <item
+        android:id="@+id/view_mode_weekly"
+        android:title="Theo tuần" />
+
+    <item
+        android:id="@+id/view_mode_monthly"
+        android:title="Theo tháng" />
+
+    <item
+        android:id="@+id/view_mode_yearly"
+        android:title="Theo năm" />
+</menu>

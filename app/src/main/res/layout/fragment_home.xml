@@ -1,0 +1,168 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.oop.fragments.HomeFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="274dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/actionbar_balance_textView"
+                    style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Số dư"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/actionbar_textView"
+                    style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1"
+                    android:ellipsize="middle"
+                    android:maxLines="1"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/actionbar_statement_btn_wrapper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/transparent"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/statement_filter_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:background="@android:color/transparent"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_outline_filter_alt"
+                    app:tint="@color/purple_500" />
+
+                <ImageButton
+                    android:id="@+id/statement_view_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_outline_remove_red_eye"
+                    app:tint="@color/purple_500" />
+
+                <ImageButton
+                    android:id="@+id/statement_reminder_btn"
+                    android:layout_width="44dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_notification"
+                    app:tint="@color/purple_500" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/actionbar_reminder_btn_wrapper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/transparent"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageButton
+                    android:id="@+id/reminder_add_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:background="@android:color/transparent"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_baseline_add_circle_outline"
+                    app:tint="@color/purple_500" />
+
+                <ImageButton
+                    android:id="@+id/reminder_filter_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:background="@android:color/transparent"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_outline_filter_alt"
+                    app:tint="@color/purple_500" />
+
+                <ImageButton
+                    android:id="@+id/reminder_view_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_outline_remove_red_eye"
+                    app:tint="@color/purple_500" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/actionbar" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/main_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tab_layout" >
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </androidx.viewpager.widget.ViewPager>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/statement_add_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="70dp"
+        android:layout_marginEnd="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_outline_monetization_on_24"
+        app:backgroundTint="@color/purple_500"
+        app:elevation="6dp"
+        app:tint="@android:color/white" />
+
+
+</RelativeLayout>

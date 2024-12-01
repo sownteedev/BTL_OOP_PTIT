@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="PopupMenu">
+        <item name="android:textColor">@color/purple_500</item>
+        <item name="android:itemBackground">#fff6f6</item>
+        <item name="android:outlineAmbientShadowColor">@android:color/transparent</item>
+        <item name="android:outlineSpotShadowColor">@android:color/transparent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+
+    </style>
+</resources>
